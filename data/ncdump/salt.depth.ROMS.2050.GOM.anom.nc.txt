@@ -1,0 +1,56 @@
+File /mnt/ecocast/projects/ROMS_2050/data/GOM_2050/salt.depth.ROMS.2050.GOM.anom.nc (NC_FORMAT_CLASSIC):
+
+     8 variables (excluding dimension variables):
+        double lat[xi_rho,eta_rho]   
+            units: degree_north
+            long_name: latitude of RHO-points
+        double lon[xi_rho,eta_rho]   
+            units: degree_east
+            long_name: longitude of RHO-points
+        float ctrl[xi_rho,eta_rho,depth,ocean_time]   
+            units: PSU
+            _FillValue: 9.99999993381581e+36
+            long_name: CTRL ROMS ocean salinity climate (1976-2005)
+            time: ocean_time
+            coordinates: lon_rho lat_rho s_rho ocean_time
+            field: salinity, scalar, series
+        float gfdl2050[xi_rho,eta_rho,depth,ocean_time]   
+            field: salinity, scalar, series
+            coordinates: lon_rho lat_rho s_rho ocean_time
+            time: ocean_time
+            long_name: GFDL ROMS ocean salinity anomaly adjusted to 2050 estimate
+            _FillValue: 9.99999993381581e+36
+            units: PSU
+        float ipsl2050[xi_rho,eta_rho,depth,ocean_time]   
+            field: salinity, scalar, series
+            coordinates: lon_rho lat_rho s_rho ocean_time
+            time: ocean_time
+            long_name: IPSL ROMS ocean salinity anomaly adjusted to 2050 estimate
+            _FillValue: 9.99999993381581e+36
+            units: PSU
+        float hadgem2050[xi_rho,eta_rho,depth,ocean_time]   
+            field: salinity, scalar, series
+            coordinates: lon_rho lat_rho s_rho ocean_time
+            time: ocean_time
+            long_name: HADGEM ROMS ocean salinity anomaly adjusted to 2050 estimate
+            _FillValue: 9.99999993381581e+36
+            units: PSU
+        double bathymetry[xi_rho,eta_rho]   
+            long_name: bathymetry at RHO-points
+            units: meter
+        float warmingratio[ncl4]   
+            description: change in radiative forcing from 1991 to 2050 vs 1991 to 2085
+            long_name: fraction of warming in 1991-2050 vs 1991-2085
+
+     5 dimensions:
+        eta_rho  Size:133
+        xi_rho  Size:166
+        ocean_time  Size:12
+            average_op_ncl: dim_avg_n over dimension(s): ocean_time
+            field: time, scalar, series
+            calendar: gregorian
+            units: seconds since 1900-01-01 00:00:00
+            long_name: averaged time since initialization
+        depth  Size:18
+            units: m
+        ncl4  Size:1

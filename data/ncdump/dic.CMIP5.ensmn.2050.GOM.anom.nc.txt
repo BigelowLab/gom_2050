@@ -1,0 +1,47 @@
+File /mnt/ecocast/projects/ROMS_2050/data/GOM_2050/dic.CMIP5.ensmn.2050.GOM.anom.nc (NC_FORMAT_CLASSIC):
+
+     2 variables (excluding dimension variables):
+        float climhist[lon,lat,month]   
+            description: CMIP5 Ensemble mean climate: historical 1976-2005
+            _FillValue: 1.00000002004088e+20
+            standard_name: mole_concentration_of_dissolved_inorganic_carbon_in_sea_water
+            long_name: Dissolved Inorganic Carbon Concentration at Surface
+            units: 1E-2 mol m-3
+            comment: Dissolved inorganic carbon (CO3+HCO3+H2CO3) concentration
+            original_name: dissic
+            original_units: micromol den
+            history: 2012-06-13T10:00:44Z altered by CMOR: Converted units from 'micromol den' to 'mol m-3'. 2012-06-13T10:00:44Z altered by CMOR: Treated scalar dimension: 'depth'.
+            cell_methods: time: mean (interval: 1 months) area: mean where sea
+            associated_files: baseURL: http://cmip-pcmdi.llnl.gov/CMIP5/dataLocation gridspecFile: gridspec_ocnBgchem_fx_CMCC-CESM_historical_r0i0p0.nc areacello: areacello_fx_CMCC-CESM_historical_r0i0p0.nc volcello: volcello_fx_CMCC-CESM_historical_r0i0p0.nc
+            missing_value: 1.00000002004088e+20
+            time_op_ncl: Climatology: 30 years
+            info: function clmMonTLL: contributed.ncl
+        float anom2050[lon,lat,month]   
+            description: CMIP5 Ensemble mean 2050 anomaly: RCP8.5 2035_2065 - Hist 1976_2005
+            info: function clmMonTLL: contributed.ncl
+            time_op_ncl: Climatology: 31 years
+            missing_value: 1.00000002004088e+20
+            associated_files: baseURL: http://cmip-pcmdi.llnl.gov/CMIP5/dataLocation gridspecFile: gridspec_ocnBgchem_fx_CMCC-CESM_rcp85_r0i0p0.nc areacello: areacello_fx_CMCC-CESM_rcp85_r0i0p0.nc volcello: volcello_fx_CMCC-CESM_rcp85_r0i0p0.nc
+            cell_methods: time: mean (interval: 1 months) area: mean where sea
+            history: 2012-06-13T10:38:53Z altered by CMOR: Converted units from 'micromol den' to 'mol m-3'. 2012-06-13T10:38:53Z altered by CMOR: Treated scalar dimension: 'depth'.
+            original_units: micromol den
+            original_name: dissic
+            comment: Dissolved inorganic carbon (CO3+HCO3+H2CO3) concentration
+            long_name: Dissolved Inorganic Carbon Concentration at Surface
+            standard_name: mole_concentration_of_dissolved_inorganic_carbon_in_sea_water
+            _FillValue: 1.00000002004088e+20
+            discription: CMIP5 Ensemble mean climate: RCP8.5 2035-2065
+            units: 1E-2 mol m-3
+
+     3 dimensions:
+        month  Size:12
+        lat  Size:7
+            standard_name: latitude
+            long_name: latitude
+            units: degrees_north
+            axis: Y
+        lon  Size:10
+            standard_name: longitude
+            long_name: longitude
+            units: degrees_east
+            axis: X

@@ -1,0 +1,55 @@
+File /mnt/ecocast/projects/ROMS_2050/data/GOM_2050/sst.ROMS.2050.GOM.anom.nc (NC_FORMAT_CLASSIC):
+
+     7 variables (excluding dimension variables):
+        double lat[xi_rho,eta_rho]   
+            units: degree_north
+            long_name: latitude of RHO-points
+        double lon[xi_rho,eta_rho]   
+            units: degree_east
+            long_name: longitude of RHO-points
+        float ctrl[xi_rho,eta_rho,ocean_time]   
+            s_rho: -0.0125
+            long_name: CTRL SST climate (1976-2005)
+            units: Celsius
+            time: ocean_time
+            coordinates: lon_rho lat_rho s_rho ocean_time
+            field: temperature, scalar, series
+            _FillValue: 9.99999993381581e+36
+        float gfdl2050[xi_rho,eta_rho,ocean_time]   
+            _FillValue: 9.99999993381581e+36
+            field: temperature, scalar, series
+            coordinates: lon_rho lat_rho s_rho ocean_time
+            time: ocean_time
+            units: Celsius
+            long_name: GFDL ROMS sst anomaly adjusted to 2050 estimate
+            s_rho: -0.0125
+        float ipsl2050[xi_rho,eta_rho,ocean_time]   
+            _FillValue: 9.99999993381581e+36
+            field: temperature, scalar, series
+            coordinates: lon_rho lat_rho s_rho ocean_time
+            time: ocean_time
+            units: Celsius
+            long_name: IPSL ROMS sst anomaly adjusted to 2050 estimate
+            s_rho: -0.0125
+        float hadgem2050[xi_rho,eta_rho,ocean_time]   
+            _FillValue: 9.99999993381581e+36
+            field: temperature, scalar, series
+            coordinates: lon_rho lat_rho s_rho ocean_time
+            time: ocean_time
+            units: Celsius
+            long_name: HADGEM ROMS sst anomaly adjusted to 2050 estimate
+            s_rho: -0.0125
+        float warmingratio[ncl3]   
+            description: change in radiative forcing from 1991 to 2050 vs 1991 to 2085
+            long_name: fraction of warming in 1991-2050 vs 1991-2085
+
+     4 dimensions:
+        eta_rho  Size:133
+        xi_rho  Size:166
+        ocean_time  Size:12
+            long_name: averaged time since initialization
+            units: seconds since 1900-01-01 00:00:00
+            calendar: gregorian
+            field: time, scalar, series
+            average_op_ncl: dim_avg_n over dimension(s): ocean_time
+        ncl3  Size:1
