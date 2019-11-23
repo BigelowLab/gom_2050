@@ -104,14 +104,14 @@ nc_get_time <- function(x, var = 'ocean_time'){
 #' @param month character the name(s) of the months to retrieve.
 #' @param loc spatial points, ignored if \code{form} is "matrix" or "table".  S
 #'  Saves a little bit of time to pass in precomputed values.
-#' @param raster_template raster used if \code{form} is 'raster'
+#' @param template raster used if \code{form} is 'raster'
 #' @return varies by value of \code{from}
 nc_get_var <- function(x,
                        var = 'ctrl',
                        month = month.abb,
                        loc = nc_get_loc(x, form = 'sf'),
                        form = c("matrix", "table", "sf", "raster")[3],
-                       raster_template = NULL){
+                       template = NULL){
 
     form <- tolower(form[1])
     imonth <- match(month, month.abb)
@@ -128,9 +128,8 @@ nc_get_var <- function(x,
       if (form %in% c('sf', 'raster')){
         r <- dplyr::bind_cols(loc,r)
         if (form == 'raster'){
-          if (is.null(raster_template)) raster_template <- default_template(r)
-          r <- as_raster(r, varname = month, na.rm = TRUE,
-                         template = raster_template)
+          if (is.null(template)) template <- raster_template(r)
+          r <- as_raster(r, varname = month, template = template)
         }
       }
     } # !matrix

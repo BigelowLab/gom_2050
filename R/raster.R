@@ -8,7 +8,7 @@
 #' @param crs character string of the mesh
 #' @param ... further arguments for \code{\link[raster]{raster}}
 #' @return a raster layer
-default_template <- function(x,
+raster_template <- function(x,
                              res = c(0.01, 0.01),
                              crs = sf::st_crs(x)$proj4string,
                              ...){
@@ -37,7 +37,7 @@ default_template <- function(x,
 #' @return a raster layer (single varname) or raster stack (multiple varname)
 as_raster <- function(x,
                       varname = NULL,
-                      template = default_template(x),
+                      template = raster_template(x),
                       ...){
 
   if (is.null(varname)) stop("varname is required")
